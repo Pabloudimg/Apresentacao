@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 html {
     font-size: 10px;
-    font-family:'poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins','Segoe UI';
     scroll-behavior: smooth;
+    background-color: black;
 
 }
 
@@ -60,7 +61,6 @@ a {
     animation-delay: 2.8s;
 }
 
-
 #apresentacao .botao{
     display:inline-block;
     padding: 10px 20px;
@@ -108,7 +108,6 @@ a {
     animation-delay: 2.5s;
 }
 
-
 #apresentacao ::after{  /*coloca uma camada sobre a tela. para efeito de filtro sobre a imagem de fundo*/
     content: ''; /*equivalente a vazio...*/
     position:absolute;
@@ -152,11 +151,13 @@ a {
     max-width: 1200px;
     flex-direction:column;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 50px 0;
 } 
 
 #portifolio .portifolio-titulo{
-    margin-top: 50px;
+
+    color: white;
+    font-size: 2.5rem;
 }
 
 #portifolio .portifolio-geral{
@@ -164,6 +165,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 }
 
 #portifolio .portifolio-item{
@@ -172,8 +174,72 @@ a {
     justify-content: center;
     flex-direction: column;
     width: 80%;
+    height: auto;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
+    border: 2px double rgba(245, 245, 245, 0.185);
 
+}
+
+#portifolio .portifolio-info{
+    padding: 20px;
+    flex-basis: 50%;
+    height: auto;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(280deg, rgb(9, 104, 104) 0%, black 100%);
+    color: white
+
+}
+
+#portifolio .portifolio-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    transition: 1s ease-in-out ;
+}
+
+#portifolio .portifolio-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#portifolio .portifolio-imagem{
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#portifolio .portifolio-imagem img{
+    width: 500px;
+    transition: 0.8s ease transform;
+    
+}
+
+#portifolio .portifolio-imagem::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+
+}
+
+#portifolio .portifolio-item:hover .portifolio-imagem img{
+    transform: scale(1.4);
+
+}
+
+#portifolio .portifolio-item:hover .portifolio-info h1{
+        color: cyan;
+        text-decoration: overline;
+  
 }
