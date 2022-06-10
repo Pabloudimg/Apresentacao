@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
 
+/* configurações gerais do html e elementos */
+
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +24,7 @@ a {
 p {
     font-size: 1.4rem;
     font-weight: 200;
-
+    overflow:hidden;
 
 }
 
@@ -53,6 +55,7 @@ p {
     color: transparent; /*white - trocado depois do keyframe*/ 
     animation: texto_revelado .5s ease forwards;
     animation-delay: 1.5s;
+
 
 }
 
@@ -128,7 +131,7 @@ p {
     z-index: -1; /*equivalente a posição da camada */
 }
 
-/*keyframes - utilizado para criar as animações*/
+/*keyframes - utilizado para criar as animações da apresentação*/
 @keyframes texto_revelado_box {
     50%{
         width: 100%;
@@ -156,7 +159,7 @@ p {
 /*seção de portifolio*/
 
 #portifolio .portifolio{
-    max-width: 1200px;
+    max-width: 1280px;
     flex-direction:column;
     margin: 0 auto;
     padding: 50px 0;
@@ -199,7 +202,7 @@ p {
     height: 100%;
     display: flex;
     align-content: flex-start;
-    justify-content: center;
+    justify-content:flex-start;
     flex-direction: column;
     background-image: linear-gradient(to left, #00ffff -73%, #000000 100%);
     color: white
